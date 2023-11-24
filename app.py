@@ -1,14 +1,14 @@
 import redis as redis
 from flask import Flask, render_template, request , redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from redis import Redis
+#from redis import Redis
 
 app = Flask(__name__)
 
 # Manually push the application context
 app.app_context().push()
 
-redis = Redis(host='localhost', port=6379)
+#redis = Redis(host='localhost', port=6379)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # create instance of the db
